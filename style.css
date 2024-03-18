@@ -1,0 +1,239 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    cursor: none;
+}
+#page-1{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(36, 36, 36);
+    overflow: hidden;
+}
+.nav{
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    top: 3%;
+}
+
+.logo{
+    width: 7%;
+    height: 100%;
+    margin-left: 3vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    animation: left 1s alternate linear;
+}
+@keyframes left {
+    0%{
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+}
+.logo h1{
+    color:rgb(119, 115, 115);
+    font-size: 1.5vw;
+}
+.menus{
+    width: 30%;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    justify-content: end;
+    padding-right: 3vw;
+    gap: 5vw;
+    font-weight: 100;
+    color: rgb(119, 115, 115) ;
+    font-size: 1.4vw;
+    animation: left 1.4s alternate linear;
+
+}
+@keyframes left {
+    0%{
+        opacity: 0;
+        transform: translateX(100%);
+    }
+}
+.name-info{
+    width: 40%;
+    height: 50%;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    overflow: hidden;
+    
+}
+
+
+.name-info h1{
+    font-size: 10vw;
+    color: rgb(241, 241, 241);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-weight: 900;
+    transform: translate(-50%,-50%);
+    animation: up 1s linear alternate; 
+}
+
+
+@keyframes up {
+    0%{
+        transform: translateX(100%);
+    }
+}
+
+
+.name-info p{
+    position:absolute;
+    top: 25%;
+    left: 20%;
+    font-size: 2vw;
+    color: rgb(119, 115, 115);
+    animation: up 1s linear alternate; 
+    
+}
+.name-info h2{
+    position: absolute;
+    bottom: 16%;
+    left: 50%;
+    color: rgb(119, 115, 115);
+    font-size: 1.5vw;
+    animation: up 1s linear alternate; 
+
+}
+
+img{
+    position: relative;
+    filter: brightness(.5);
+    width: 20vw;
+    opacity: 0;   
+    mix-blend-mode: difference; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    transition: all 0.5s ease-in-out;
+}
+.contact-social{
+    width: 5%;
+    height: 40vh;
+    position: absolute;
+    bottom: 5%;
+    /* background-color: red; */
+    margin-left: 4vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4vw;
+    animation: upm 1s linear alternate; 
+
+}
+@keyframes  upm {
+    0%{
+        transform: translateX(-200%);
+    }
+}
+.contact-social h1{
+    color: rgb(119, 115, 115) ;
+    font-size:1.9vw;
+    cursor: pointer;
+}
+
+.z1{
+    position: absolute;
+    height: 5vh;
+    width: 5vw;
+    /* background-color: red; */
+    margin-left: 4vw;
+    bottom: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size:1.2vw;
+    animation: upm .5s linear alternate; 
+    color: white;
+
+}
+.left-slogan{
+    width: 5vw;
+    height: 20vh;
+    position: absolute;
+    bottom: 2%;
+    right: 3vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    animation: upm 1s linear ; 
+
+}
+.left-slogan h1{
+    rotate: 90deg;
+    font-size: 1.5vw;
+    color: rgb(119, 115, 115);
+}
+.cursor{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border:2px solid white;
+    position: absolute;
+    transform: translate(-50%,-50%);
+}
+
+/* Responsive codes */
+
+@media (max-width:600px) {
+    .nav .menus{
+        display:none;
+    }
+    .logo h1{
+        font-size: 4vw;
+    }
+    .name-info{
+        width: 100%;
+        height: 50%;
+    }
+
+    .name-info h1 {
+        font-size: 20vw;
+    }
+    .name-info p{
+        font-size: 5vw;
+        position: absolute;
+        top: 30%;
+    }
+    .name-info h2{
+        font-size: 5vw;
+        position: absolute;
+        bottom: 20%;
+    }
+    .contact-social h1{
+        font-size: 5vw;
+    }
+    .left-slogan {
+        margin-right: 5Vw;
+    }
+    .left-slogan h1{
+        font-size: 4vw;
+        
+    }
+    .z1 h1{
+        font-size:4vw ;
+    }
+
+}
